@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <title>그림판</title>
+    </head>
+    <body onmousedown="start();" onmousemove="draw();" onmouseup="stop();">
+        
+        <canvas id="myCanvas" width="480" height="320"> </canvas> 
+        <script text="text/javascript" src="main.js"> </script>
+        <br>
+        <form action="">
+            펜 컬러:
+            <input type="radio" name="color_name" value="black" id="black" onclick="changeColor()" checked="checked">
+            <label for="black" id="blacks">검정</label>
+            <input type="radio" name="color_name" value="red" id="red" onclick="changeColor()">
+            <label for="red" id="reds">빨강</label>
+            <input type="radio" name="color_name" value="green" id="green" onclick="changeColor()">
+            <label for="green" id="greens">초록</label>
+            <input type="radio" name="color_name" value="blue" id="blue" onclick="changeColor()">
+            <label for="blue" id="blues">파랑</label>
+            <input type="radio" name="color_name" value="white" id="white" onclick="changeColor()">
+            <label for="white" id="whites">흰색</label>
+            <br>
+            펜 굵기:
+            <input type="range" min="1" max="30" value="1" name="slider" onchange="changeWidth()">
+            <br>
+            <button type="button" id="btn-1" onclick="redraw()">캔버스 초기화</button>
+            <button type="button" id="btn-2" onclick="saveIMG()">캔버스 저장</button>
+            <br>
+            <img id="canvasImage" />
+        </form>
+        
+
+    </body>
+</html>
